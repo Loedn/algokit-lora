@@ -1,5 +1,5 @@
 import { PROVIDER_ID } from '@txnlab/use-wallet'
-import { localnetId, mainnetId, testnetId } from '.'
+import { localnetId, mainnetId, testnetId, fnetId } from '.'
 
 export type ServiceConfig = {
   server: string
@@ -8,7 +8,7 @@ export type ServiceConfig = {
   token?: string
 }
 
-export type NetworkId = typeof localnetId | typeof testnetId | typeof mainnetId | string
+export type NetworkId = typeof localnetId | typeof testnetId | typeof fnetId | typeof mainnetId | string
 
 export type NetworkConfig = {
   name: string

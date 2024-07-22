@@ -14,6 +14,7 @@ import {
   mainnetId,
   nonLocalnetWalletProviders,
   testnetId,
+  fnetId,
 } from '@/features/network/data'
 
 type FormInnerProps = {
@@ -161,7 +162,7 @@ const getSupportedWalletProviderOptions = (networkId?: string) => {
     label: allWalletProviderNames[provider],
   }))
 
-  if (networkId === mainnetId || networkId === testnetId) {
+  if (networkId === mainnetId || networkId === testnetId || networkId === fnetId) {
     return nonLocalnetWalletProviderOptions
   }
 

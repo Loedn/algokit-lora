@@ -7,6 +7,7 @@ import { settingsStore } from '@/features/settings/data'
 
 export const localnetId = 'localnet'
 export const testnetId = 'testnet'
+export const fnetId = 'fnet'
 export const mainnetId = 'mainnet'
 export const localnetWalletProviders = [PROVIDER_ID.KMD, PROVIDER_ID.MNEMONIC]
 export const nonLocalnetWalletProviders = [PROVIDER_ID.DEFLY, PROVIDER_ID.DAFFI, PROVIDER_ID.PERA, PROVIDER_ID.EXODUS, PROVIDER_ID.LUTE]
@@ -47,6 +48,18 @@ export const defaultNetworkConfigs: Record<NetworkId, NetworkConfig> = {
       token: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     },
     walletProviders: localnetWalletProviders,
+  },
+  [fnetId]: {
+    name: 'fNet',
+    indexer: {
+      server: ' https://fnet-idx.4160.nodely.io/',
+      port: 443,
+    },
+    algod: {
+      server: 'https://fnet-api.4160.nodely.io/',
+      port: 443,
+    },
+    walletProviders: nonLocalnetWalletProviders,
   },
   [testnetId]: {
     name: 'TestNet',
